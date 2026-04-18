@@ -2,7 +2,7 @@ name: Ping Hugging Face Space
 
 on:
   schedule:
-    - cron: '0 6 * * *'
+    - cron: '*/20 * * * *' # Каждые 20 минут
   workflow_dispatch:
 
 jobs:
@@ -29,7 +29,7 @@ jobs:
 
       - name: Run monitor
         env:
-          SPACE_URL: ${{ secrets.SPACE_URL }}
+          SPACE_URL: https://huggingface.co/spaces/AliiaM/marqo_classification
         run: |
           mkdir -p artifacts/logs artifacts/screenshots
           node scripts/monitor_space.js
