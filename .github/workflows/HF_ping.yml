@@ -2,7 +2,7 @@ name: Ping Hugging Face Space
 
 on:
   schedule:
-    - cron: '*/20 * * * *' # Каждые 20 минут
+    - cron: '0 6 * * *'
   workflow_dispatch:
 
 jobs:
